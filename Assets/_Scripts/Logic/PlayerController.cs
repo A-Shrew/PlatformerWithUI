@@ -73,6 +73,10 @@ public class PlayerController : MonoBehaviour
 
     private bool IsTouchingGround() => Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.1f, groundLayer);
 
+    public void UpdatePlayerMaxSpeed(float speed)
+    {
+        maxSpeed = speed;
+    }
     private void MovePlayer(Vector2 dirn)
     {
         Vector3 direction = new Vector3(dirn.x, 0f, dirn.y) ;
